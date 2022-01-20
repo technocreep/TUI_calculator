@@ -18,19 +18,19 @@ class FormObject(npyscreen.ActionForm, npyscreen.FormWithMenus):  # pylint: disa
 
         self.oper_1 = self.add(npyscreen.TitleText, name='Operand #1:',	value='100',
                                begin_entry_at=15)
-        self.nextrely += 1								# пробельчик между строками
+        self.nextrely += 1								
 
         self.oper_2 = self.add(npyscreen.TitleText, name='Operand #2:', value='2.2',
                                begin_entry_at=15)
-        self.nextrely += 1								# пробельчик между строками
+        self.nextrely += 1								
 
         self.options = self.add(npyscreen.TitleSelectOne, max_height=5, name='Operation',
                                 values=['+', '-', '*', '/', '**'], scroll_exit=True)
-        self.nextrely += 1								# пробельчик между строками
+        self.nextrely += 1								
 
         self.result = self.add(npyscreen.TitleText,
                                name='Result: ', begin_entry_at=15)
-        self.nextrely += 1								# пробельчик между строками
+        self.nextrely += 1								
 
         self.menu = self.new_menu('Main Menu')
         self.menu.addItem('About this app', self.about_app, 'a')
@@ -100,7 +100,7 @@ class HistoryPage(npyscreen.ActionForm):    # pylint: disable=too-many-ancestors
 
         self.info = self.add(npyscreen.TitleText,
                              name='OK - refresh. CANCEL - exit.')
-        self.nextrely += 1								# пробельчик между строками
+        self.nextrely += 1								
 
         self.show_history = self.add(npyscreen.MultiLineEdit)
 
@@ -114,14 +114,14 @@ class HistoryPage(npyscreen.ActionForm):    # pylint: disable=too-many-ancestors
         self.parentApp.switchForm('MAIN')
 
 
-class App(npyscreen.NPSAppManaged):		# менеджер приложения
+class App(npyscreen.NPSAppManaged):		
     '''Class of application manager which registers main form and history page.'''
 
     def onStart(self):
         self.addForm('MAIN', FormObject, name='TUI-Calculator',
-                     lines=16, columns=50)  # связка мееджер-форма
+                     lines=16, columns=50)  
         self.addForm('HISTORY', HistoryPage, name='History Page',
-                     lines=16, columns=50)  # форма с историей
+                     lines=16, columns=50)  
 
 
 if __name__ == '__main__':
