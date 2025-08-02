@@ -1,9 +1,9 @@
-# CLI Calculator
+# Terminal Calculator
 
 This project originally relied on the obsolete `npyscreen` library to
-provide a terminal user interface. The application has been simplified
-to use only Python's standard library, offering a lightweight menu-based
-calculator that runs in any terminal.
+provide a terminal user interface. It now uses Python's built-in
+`curses` module to deliver a lightweight text UI that runs in any
+terminal without external dependencies.
 
 ## Installation
 
@@ -18,5 +18,6 @@ Launch the calculator from the command line:
 ```
 
 Use the on-screen menu to perform calculations, review the history log,
-or delete stored history entries.
+or delete stored history entries. Navigate with the arrow keys or press
+the number keys `1`‑`4` to select an option.
 
