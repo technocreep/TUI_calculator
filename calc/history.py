@@ -12,7 +12,6 @@ history page.
 import json
 import datetime
 import os
-from pandas import DataFrame as pd_df
 
 
 def log_create(a_num, b_num, oper, result):
@@ -41,13 +40,10 @@ def log_read():
     '''Function to read file in case of its presence'''
 
     if os.path.isfile('logs.json'):
-
         with open('logs.json', 'r') as json_file:
             data_read = json.load(json_file)
-        # create datagrame from dictionary
-        data_frame = pd_df(data_read.items(), columns=['Date-Time', 'Expression'])
-
-        return str(data_frame)
+        lines = [f"{key}: {value}" for key, value in data_read.items()]
+        return "\n".join(lines)
 
     return None
 

@@ -1,2 +1,2 @@
-npyscreen
-pandas
+# This project no longer relies on the outdated npyscreen library.
+# No external dependencies are required.

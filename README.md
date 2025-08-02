@@ -1,14 +1,13 @@
-# TUI Calculator
+# CLI Calculator
 
-A simple terminal user interface (TUI) calculator built with [npyscreen](https://github.com/npcole/npyscreen).
+This project originally relied on the obsolete `npyscreen` library to
+provide a terminal user interface. The application has been simplified
+to use only Python's standard library, offering a lightweight menu-based
+calculator that runs in any terminal.
 
 ## Installation
 
-Install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
+No external dependencies are required.
 
 ## Usage
 
@@ -18,5 +17,6 @@ Launch the calculator from the command line:
 ./app run
 ```
 
-The `app` script can also be installed or invoked via `python app run` if execute permissions are not set.
+Use the on-screen menu to perform calculations, review the history log,
+or delete stored history entries.
 
